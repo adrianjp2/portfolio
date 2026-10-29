@@ -84,7 +84,7 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
                 </div>
               </div>
 
-              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 text-[0.95rem] md:text-base">
+              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 text-[0.95rem] md:text-base text-justify">
                 {t.about_desc}
               </p>
 

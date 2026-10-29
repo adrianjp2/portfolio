@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #fafafa;
+  --card-bg: #ffffff;
+  --card-border: #e7e7e7;
+  --card-hover-border: #cbd5e1;
+  --text: #0a0a0a;
+  --text-secondary: #525252;
+  --text-muted: #737373;
+  --border: #e7e7e7;
+  --pink: #ec4899;
+  --rose: #e11d48;
+  --orange: #f97316;
+  --teal: #0d9488;
+  --teal-light: #14b8a6;
+  --black: #0a0a0a;
+  --pill-bg: #fffbeb;
+  --pill-border: #fde68a;
+  --pill-text: #b45309;
+  --chip-bg: #ffffff;
+  --chip-border: #e7e7e7;
+  --chip-text: #525252;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --footer-bg: #0a0a0a;
+  --footer-text: #ffffff;
+  --footer-muted: #a3a3a3;
+  --footer-border: #262626;
+  --radius: 20px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 45px -15px rgba(0, 0, 0, 0.12);
+  --modal-bg: #ffffff;
+  --modal-backdrop: rgba(10, 10, 10, 0.6);
+  --badge-bg: #f3f4f6;
+  --badge-text: #374151;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0f17;
+  --bg-subtle: #111726;
+  --card-bg: #151d30;
+  --card-border: #232f48;
+  --card-hover-border: #3b82f6;
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #1e293b;
+  --pill-bg: rgba(245, 158, 11, 0.12);
+  --pill-border: rgba(245, 158, 11, 0.3);
+  --pill-text: #fbbf24;
+  --chip-bg: #151d30;
+  --chip-border: #232f48;
+  --chip-text: #cbd5e1;
+  --nav-bg: rgba(11, 15, 23, 0.85);
+  --footer-bg: #070a0f;
+  --footer-text: #f8fafc;
+  --footer-muted: #8492a6;
+  --footer-border: #1a2234;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 20px 45px -15px rgba(0, 0, 0, 0.5);
+  --modal-bg: #151d30;
+  --modal-backdrop: rgba(0, 0, 0, 0.8);
+  --badge-bg: #1e293b;
+  --badge-text: #cbd5e1;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-light);
+  outline-offset: 3px;
+}
+
+.grad-text {
+  background: linear-gradient(92deg, #ec4899 0%, #e11d48 45%, #f97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+

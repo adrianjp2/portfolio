@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrián José Pérez Figueredo | Full-Stack & Backend Developer</title>
+
+  <!-- SEO & Metatags -->
+  <meta name="description"
+    content="Desarrollador Full-Stack con más de 10 años de experiencia. Especialista en PHP/Laravel, Node.js, NestJS, React, Vue, Angular, PostgreSQL y MySQL. Aragua, Venezuela.">
+  <meta name="keywords"
+    content="Adrián Pérez, Full-Stack Developer, Backend Developer, Laravel, NestJS, Node.js, React, PostgreSQL, Venezuela, Remote Developer">
+  <meta name="author" content="Adrián José Pérez Figueredo">
+  <meta name="theme-color" content="#ec4899">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adrián José Pérez Figueredo | Full-Stack & Backend Developer">
+  <meta property="og:description"
+    content="Más de 10 años diseñando y escalando sistemas web con Laravel, NestJS, React y bases de datos relacionales y NoSQL.">
+  <meta property="og:image" content="assets/perfil.png">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adrián José Pérez Figueredo | Full-Stack & Backend Developer">
+  <meta name="twitter:description"
+    content="Más de 10 años diseñando y escalando sistemas web con Laravel, NestJS, React y bases de datos relacionales y NoSQL.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=1.1">
+
+  <!-- Scripts (Translations first, then Main app logic) -->
+  <script defer src="js/translations.js?v=1.1"></script>
+  <script defer src="js/main.js?v=1.1"></script>
+</head>
+
+<body>
+
+  <!-- Barra de progreso de lectura superior -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <nav aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a href="#" class="brand" aria-label="Inicio - Adrián Pérez">
+        <span class="avatar" aria-hidden="true">
+          <img src="assets/perfil.png" alt="Adrián Pérez" class="avatar-img">
+        </span>
+        <span>Adrián Pérez</span>
+      </a>
+
+      <!-- Enlaces de navegación Desktop -->
+      <ul class="nav-links">
+        <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+        <li><a href="#experiencia" data-i18n="nav_experience">Experiencia</a></li>
+        <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+        <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+      </ul>
+
+      <!-- Acciones de Navegación -->
+      <div class="nav-actions">
+        <!-- Botón Cambio de Idioma (ES / EN) -->
+        <button id="lang-toggle" class="lang-toggle-btn" type="button" aria-label="Cambiar idioma a Inglés"
+          title="Cambiar idioma a Inglés (English)">
+          <span class="lang-globe">🌐</span>
+          <span class="lang-text">EN</span>
+        </button>
+
+        <!-- Botón Cambio de Tema -->
+        <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Cambiar a modo oscuro"
+          title="Modo oscuro">
+          🌙
+        </button>
+
+        <a href="#contacto" class="btn-outline" data-i18n="nav_talk">Hablemos</a>
+        <a href="assets/CV_Adrian_Perez.pdf" download class="btn-black" title="Descargar Currículum en PDF"
+          data-i18n-html="nav_cv">
+          <span>⬇</span> Descargar CV
+        </a>
+
+        <!-- Botón Menú Mobile Hamburger -->
+        <button class="mobile-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL DESPLEGABLE -->
+  <div id="mobile-menu" class="mobile-menu" aria-label="Menú móvil">
+    <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
+    <a href="#experiencia" data-i18n="nav_experience">Experiencia</a>
+    <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+    <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    <div class="mobile-actions">
+      <button id="mobile-lang-toggle" class="lang-toggle-btn" type="button" aria-label="Cambiar idioma a Inglés"
+        title="Cambiar idioma a Inglés (English)">
+        <span class="lang-globe">🌐</span>
+        <span class="lang-text">EN</span>
+      </button>
+      <a href="#contacto" class="btn-outline" data-i18n="nav_talk">Hablemos</a>
+      <a href="assets/CV_Adrian_Perez.pdf" download class="btn-black" data-i18n-html="nav_cv"><span>⬇</span> Descargar CV</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <header class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-avatar-wrap reveal">
+          <div class="hero-avatar-box">
+            <img src="assets/perfil.png" alt="Adrián Pérez" class="hero-avatar-img">
+            <span class="hero-avatar-badge" title="Disponible para nuevos proyectos" data-i18n-title="hero_available"></span>
+          </div>
+        </div>
+        <div class="hero-pill">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="hero_role_pill">Full-Stack · Backend Developer</span>
+        </div>
+        <h1 data-i18n-html="hero_title">
+          Construyendo <span class="grad-text">arquitecturas robustas</span>,<br>
+          flujos automatizados con <span class="grad-text">IA</span><br>
+          y sistemas en los que los equipos <span class="grad-text">confían.</span>
+        </h1>
+        <div class="hero-pills">
+          <span data-i18n="hero_pill_backend">⚙️ Desarrollo Back-End</span>
+          <span data-i18n="hero_pill_apis">🔌 APIs & Microservicios</span>
+          <span data-i18n="hero_pill_ai">🤖 Automatizaciones con IA</span>
+          <span data-i18n="hero_pill_fullstack">🎨 Experiencia Full-Stack</span>
+          <span data-i18n="hero_pill_scalable">🚀 Arquitectura Escalable</span>
+        </div>
+        <p class="hero-sub" data-i18n-html="hero_sub">
+          Más de <strong>10 años de experiencia</strong> diseñando y escalando sistemas web de alta disponibilidad
+          con PHP/Laravel, Node.js y NestJS, capaces de procesar grandes volúmenes
+          de datos con PostgreSQL, MySQL, Redis y MongoDB.
+        </p>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn-black lg" data-i18n="hero_cta_talk">💬 Hablemos</a>
+          <a href="assets/CV_Adrian_Perez.pdf" download class="btn-ghost" data-i18n="hero_cta_cv">⬇ Descargar CV</a>
+          <a href="#experiencia" class="btn-ghost" data-i18n="hero_cta_exp">💼 Ver Experiencia</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-card reveal">
+            <div>
+              <div class="about-author-header">
+                <img src="assets/perfil.png" alt="Adrián Pérez" class="about-author-img">
+                <div>
+                  <h3 data-i18n="about_title">Soy Adrián Pérez.</h3>
+                  <span class="about-author-role" data-i18n="about_role">Full-Stack &amp; Backend Developer</span>
+                </div>
+              </div>
+              <p class="proj-desc" data-i18n="about_desc">
+                Desarrollador Full-Stack con más de una década de trayectoria diseñando y
+                escalando sistemas web. Especialista en el ecosistema Back-End
+                (PHP/Laravel, Node.js, NestJS), con capacidad sólida para liderar el ciclo
+                completo de desarrollo, desde la arquitectura de base de datos hasta el front-end
+                moderno con React, Vue y TypeScript. Enfocado en automatización de procesos,
+                integración de APIs de terceros y arquitecturas limpias orientadas al negocio.
+              </p>
+              <div class="about-badges">
+                <div class="about-badge" data-i18n="about_badge_degree">🎓 Ingeniero en Informática · UPT Aragua, 2015</div>
+                <div class="about-badge" data-i18n="about_badge_languages">🌐 Español Nativo · Inglés Profesional</div>
+              </div>
+            </div>
+            <a href="#experiencia" class="btn-white" data-i18n="about_btn_explore">Explorar proyectos →</a>
+          </div>
+
+          <div class="rings">
+            <div class="ring-card reveal">
+              <div class="ring" data-pct="100" aria-label="Más de 10 años de experiencia">
+                <svg width="68" height="68">
+                  <circle class="track" cx="34" cy="34" r="26" />
+                  <circle class="bar" cx="34" cy="34" r="26" stroke="#ec4899" />
+                </svg>
+                <span class="num">10+</span>
+              </div>
+              <div class="ring-info">
+                <h4 data-i18n="about_ring1_title">Años de Trayectoria</h4>
+                <p data-i18n="about_ring1_desc">Diseñando y escalando sistemas web para empresas en LATAM, USA y Europa.</p>
+              </div>
+            </div>
+
+            <div class="ring-card reveal">
+              <div class="ring" data-pct="90" aria-label="Más de 10 proyectos clave">
+                <svg width="68" height="68">
+                  <circle class="track" cx="34" cy="34" r="26" />
+                  <circle class="bar" cx="34" cy="34" r="26" stroke="#14b8a6" />
+                </svg>
+                <span class="num">10+</span>
+              </div>
+              <div class="ring-info">
+                <h4 data-i18n="about_ring2_title">Proyectos de Alto Impacto</h4>
+                <p data-i18n="about_ring2_desc">Desde SaaS de pagos P2P y marketplaces hasta logística internacional y GovTech.</p>
+              </div>
+            </div>
+
+            <div class="ring-card reveal">
+              <div class="ring" data-pct="85" aria-label="Más de 15 tecnologías dominadas">
+                <svg width="68" height="68">
+                  <circle class="track" cx="34" cy="34" r="26" />
+                  <circle class="bar" cx="34" cy="34" r="26" stroke="#f97316" />
+                </svg>
+                <span class="num">15+</span>
+              </div>
+              <div class="ring-info">
+                <h4 data-i18n="about_ring3_title">Tecnologías Dominadas</h4>
+                <p data-i18n="about_ring3_desc">Laravel, NestJS, React, Vue, Angular, PostgreSQL, MySQL, Redis, Docker y más.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA / PROYECTOS -->
+    <section id="experiencia"
+      style="background:var(--bg-subtle);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div>
+            <span class="sec-pill" data-i18n="exp_pill">Experiencia Comprobada</span>
+            <h2 data-i18n-html="exp_title">Construyendo productos con impacto,<br>esfuerzo y un toque de <span class="grad-text">código
+                limpio</span></h2>
+          </div>
+          <a href="#contacto" class="sec-link" data-i18n="exp_link_talk">Hablemos de tu proyecto →</a>
+        </div>
+
+        <!-- Filtros interactivos de proyectos -->
+        <div class="project-filters reveal" role="toolbar" aria-label="Filtrar proyectos por categoría">
+          <button class="filter-btn active" data-filter="all" type="button" data-i18n-html="filter_all">
+            Todos <span class="count">9</span>
+          </button>
+          <button class="filter-btn" data-filter="backend" type="button" data-i18n-html="filter_backend">
+            Backend &amp; APIs <span class="count">5</span>
+          </button>
+          <button class="filter-btn" data-filter="fullstack" type="button" data-i18n-html="filter_fullstack">
+            Full-Stack <span class="count">4</span>
+          </button>
+          <button class="filter-btn" data-filter="ecommerce" type="button" data-i18n-html="filter_ecommerce">
+            E-commerce &amp; Fintech <span class="count">3</span>
+          </button>
+          <button class="filter-btn" data-filter="mobile" type="button" data-i18n-html="filter_mobile">
+            Mobile &amp; GovTech <span class="count">2</span>
+          </button>
+        </div>
+
+        <div class="proj-list">
+
+          <!-- PROYECTO 1 -->
+          <article class="proj reveal" data-category="backend fullstack">
+            <div>
+              <h3 data-i18n="p1_title">Plataforma de Tracking &amp; Fulfillment Logístico</h3>
+              <p class="proj-desc" data-i18n-html="p1_desc">El motor que mueve <strong>~100.000 paquetes</strong> entre África y Latinoamérica.
+                Plataforma backend de alto rendimiento que sigue cada paquete de punta a punta: clasificación, aduanas,
+                aranceles, zonas de distribución y rastreo en tiempo real, todo orquestado en un solo sistema.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p1_type">Cross-border e-commerce · MailAmericas (MLA)</div>
+              <div class="proj-actions">
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_details">Ver detalles y arquitectura</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date">THEEGG BITS &amp; BYTES LLC · MailAmericas (MLA)</div>
+              <ul>
+                <li data-i18n-html="p1_b1">🌍 <strong>Escala real:</strong> ~100.000 paquetes en movimiento, operación multi-región integrada
+                  con los marketplaces y couriers más grandes del mundo.</li>
+                <li data-i18n-html="p1_b2">📡 <strong>Motor de eventos de tracking:</strong> diseño del procesamiento que mantiene sincronizado
+                  el estado de cada paquete en tiempo real con sistemas externos.</li>
+                <li data-i18n-html="p1_b3">🔌 <strong>Integraciones masivas:</strong> AliExpress y Cainiao para la ingesta y sincronización de
+                  datos de envíos a gran escala.</li>
+                <li data-i18n-html="p1_b4">🧩 <strong>Módulos de dominio logístico:</strong> zonas de distribución, sorting y servicios de
+                  paquetes con procesamiento asíncrono.</li>
+                <li data-i18n-html="p1_b5">⚡ <strong>Resiliencia operativa:</strong> miles de operaciones concurrentes con Redis/Horizon,
+                  reintentos automáticos y tolerancia a fallos.</li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> PHP 8.1, Laravel 9, Redis, Laravel Horizon, MySQL,
+                GraphQL, REST, SOAP, AWS S3, Docker, Datadog.</div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 2 -->
+          <article class="proj reveal" data-category="backend fullstack">
+            <div>
+              <h3 data-i18n="p2_title">Sorting — Clasificación logística inteligente</h3>
+              <p class="proj-desc" data-i18n-html="p2_desc">Plataforma que automatiza la clasificación de paquetes en centros de distribución de
+                punta a punta: cada orden se evalúa contra reglas de negocio dinámicas y configurables, enrutando al
+                destino y proveedor correctos en tiempo real, sin intervención manual.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p2_type">Logística / SaaS multiempresa</div>
+              <div class="proj-actions">
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_details">Ver detalles y arquitectura</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date">THEEGG BITS &amp; BYTES LLC · MailAmericas (MLA)</div>
+              <ul>
+                <li data-i18n-html="p2_b1">⚡ <strong>Procesamiento asíncrono:</strong> sostiene grandes volúmenes de órdenes con baja latencia
+                  y sin degradar la experiencia de usuario.</li>
+                <li data-i18n-html="p2_b2">🧩 <strong>Motor de reglas configurable:</strong> enrutamiento por código postal, tipo de servicio,
+                  peso y dimensiones.</li>
+                <li data-i18n-html="p2_b3">🏗️ <strong>Arquitectura limpia:</strong> Domain-Driven Design (DDD) con NestJS y PostgreSQL,
+                  altamente modular y mantenible.</li>
+                <li data-i18n-html="p2_b4">🚀 <strong>CI/CD automatizado:</strong> entrega continua con Docker y versionado semántico estricto.
+                </li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> React, TypeScript, NestJS, PostgreSQL, Redis, Docker.
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 3 -->
+          <article class="proj reveal" data-category="ecommerce fullstack" data-live-url="https://togetmcy.com/">
+            <div>
+              <h3 data-i18n="p3_title">ToGet — Marketplace</h3>
+              <p class="proj-desc" data-i18n-html="p3_desc">E-commerce de tecnología con tienda física en el C.C. Hyper Jumbo (Maracay) y
+                delivery express a toda Venezuela: productos 100% originales, financiamiento con Cashea y checkout
+                asistido por WhatsApp.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p3_type">E-commerce / Marketplace · Retail tech</div>
+              <div class="proj-actions">
+                <a href="https://togetmcy.com/" target="_blank" rel="noopener noreferrer" class="btn-wide" data-i18n="proj_btn_visit">Visitar sitio
+                  ↗</a>
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_view_details"
+                  style="background:transparent;color:var(--text);border:1px solid var(--border);">Ver detalles</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date"></div>
+              <ul>
+                <li data-i18n-html="p3_b1">🛒 <strong>Marketplace completo:</strong> catálogo reactivo, carrito de compras, cotizaciones y
+                  gestión automatizada de pedidos.</li>
+                <li data-i18n-html="p3_b2">💳 <strong>Calculadora Cashea en vivo:</strong> cálculo instantáneo (inicial 40% + 3 cuotas) con
+                  cronograma exacto de pagos.</li>
+                <li data-i18n-html="p3_b3">📲 <strong>Checkout asistido:</strong> flujo interactivo vía WhatsApp para confirmación de stock y
+                  cierre directo de venta.</li>
+                <li data-i18n-html="p3_b4">🚚 <strong>Logística nacional:</strong> delivery express local y envíos nacionales con tasa de
+                  cambio BCV sincronizada en vivo.</li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> React 19, TypeScript, TanStack Start &amp; Router,
+                TanStack Query, Tailwind CSS v4, Radix UI, React Hook Form, Zod, Supabase, Cloudflare.</div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 4 -->
+          <article class="proj reveal" data-category="ecommerce backend">
+            <div>
+              <h3 data-i18n="p4_title">GivBux</h3>
+              <p class="proj-desc" data-i18n-html="p4_desc">Pagos móviles "peer to peer" sin efectivo con puntos de lealtad, recompensas y
+                descuentos. App publicada en Google Play respaldada por APIs seguras para aplicaciones móviles y
+                clientes web.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p4_type">Fintech / Pagos móviles P2P</div>
+              <div class="proj-actions">
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_tech_details">Ver detalles técnicos</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date">Rock7Media</div>
+              <ul>
+                <li data-i18n-html="p4_b1">💳 <strong>Pasarelas financieras:</strong> integración de métodos de pago bancario y transaccional
+                  con Dwolla y PayPal.</li>
+                <li data-i18n-html="p4_b2">⚡ <strong>Arquitectura de Microservicios:</strong> servicios PHP con Laravel 5 y micro-framework
+                  Lumen 5.6 de alta velocidad.</li>
+                <li data-i18n-html="p4_b3">📱 <strong>Soporte Multiplataforma:</strong> API REST consumida simultáneamente por apps móviles en
+                  iOS/Android y web.</li>
+                <li data-i18n-html="p4_b4">💻 <strong>Panel Front-End:</strong> interfaces administrativas reactivas construidas con Vue.js y
+                  Webpack.</li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> Laravel 5, Lumen 5.6, Vue.js, PHP, Dwolla, PayPal, MySQL,
+                JSON, Webpack.</div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 5 -->
+          <article class="proj reveal" data-category="backend fullstack">
+            <div>
+              <h3 data-i18n="p5_title">Eutopia Life</h3>
+              <p class="proj-desc" data-i18n-html="p5_desc">Plataforma web empresarial con pasarela de pagos y CRM para la gestión integral del
+                negocio: portal público de información, portal de cobros y CRM interno a medida.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p5_type">SaaS / Plataforma web + CRM</div>
+              <div class="proj-actions">
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_eco_details">Ver detalles del ecosistema</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date">Rock7Media</div>
+              <ul>
+                <li data-i18n-html="p5_b1">🌐 <strong>Ecosistema unificado:</strong> sitio público institucional, pasarela transaccional y CRM
+                  operativo.</li>
+                <li data-i18n-html="p5_b2">💼 <strong>CRM a medida:</strong> gestión de cartera de clientes, estados de cuenta, facturación y
+                  reportes analíticos.</li>
+                <li data-i18n-html="p5_b3">🎨 <strong>Front-end modular:</strong> maquetación responsiva con Vue.js, Element UI, Bootstrap y
+                  SASS.</li>
+                <li data-i18n-html="p5_b4">⚙️ <strong>Infraestructura:</strong> configuración y optimización de servidores Apache, MySQL y
+                  entornos de producción.</li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> Laravel 5, Vue.js, Element UI, Bootstrap, SASS, MySQL,
+                Apache, cPanel.</div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 6 -->
+          <article class="proj reveal" data-category="mobile fullstack">
+            <div>
+              <h3 data-i18n="p6_title">Salix Fruits</h3>
+              <p class="proj-desc" data-i18n-html="p6_desc">App y plataforma de marketplace para el mercado internacional de frutas, con
+                aplicación móvil híbrida para distribuidores y panel web de administración global.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p6_type">Marketplace / App móvil + Web</div>
+              <div class="proj-actions">
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_app_details">Ver detalles de la app</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date">Lyncros</div>
+              <ul>
+                <li data-i18n-html="p6_b1">📱 <strong>Desarrollo móvil híbrido:</strong> app publicada en Google Play utilizando Ionic
+                  Framework.</li>
+                <li data-i18n-html="p6_b2">🖥️ <strong>Panel Web Angular:</strong> front-end robusto desarrollado con Angular 5/6/7, Angular
+                  Material y SASS.</li>
+                <li data-i18n-html="p6_b3">🔌 <strong>Backend RESTful:</strong> arquitectura de APIs en Laravel 5 para sincronización de
+                  catálogos y órdenes en tiempo real.</li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> Ionic, Angular 5/6/7, Laravel 5, PHP, Angular Material,
+                MySQL.</div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 7 -->
+          <article class="proj reveal" data-category="fullstack">
+            <div>
+              <h3 data-i18n="p7_title">Astrology Hive</h3>
+              <p class="proj-desc" data-i18n-html="p7_desc">Plataforma web de astrología con desarrollo Full-Stack completo: cálculo de cartas
+                natales, integraciones cartográficas y front-end interactivo responsivo.</p>
+              <div class="proj-label" data-i18n="proj_type_label">Tipo de proyecto</div>
+              <div class="proj-type" data-i18n="p7_type">Web App / Full-Stack</div>
+              <div class="proj-actions">
+                <button class="btn-wide open-modal-btn" type="button" data-i18n="proj_btn_view_details">Ver detalles del proyecto</button>
+              </div>
+            </div>
+            <div class="proj-detail">
+              <div class="proj-date">Rock7Media</div>
+              <ul>
+                <li data-i18n-html="p7_b1">🗺️ <strong>Integración geográfica:</strong> geocodificación y cálculo de coordenadas con Google
+                  Maps API.</li>
+                <li data-i18n-html="p7_b2">⚙️ <strong>Mantenimiento evolutivo:</strong> optimización continua de rendimiento y nuevas
+                  características en backend Laravel.</li>
+                <li data-i18n-html="p7_b3">🖥️ <strong>Experiencia de usuario:</strong> interfaces reactivas en Vue.js diseñadas para
+                  visualización clara de datos.</li>
+              </ul>
+              <div class="proj-stack"><strong>Stack:</strong> Laravel 5, Vue.js, PHP, MySQL, Google Maps API, JSON.
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES / STACK TÉCNICO -->
+    <section id="habilidades">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div>
+            <span class="sec-pill" data-i18n="skills_pill">Stack Técnico</span>
+            <h2 data-i18n="skills_title">Tecnologías &amp; Herramientas</h2>
+          </div>
+          <a href="#contacto" class="sec-link" data-i18n="skills_link">Hablemos sobre tu stack →</a>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Backend -->
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills_cat_backend">Backend &amp; Arquitectura</h3>
+            <div class="chips">
+              <span>PHP 8.x / 7.x</span>
+              <span>Laravel (5 al 12)</span>
+              <span>NestJS</span>
+              <span>Node.js</span>
+              <span>Lumen</span>
+              <span>RESTful APIs</span>
+              <span>GraphQL</span>
+              <span>SOAP</span>
+              <span>Microservicios</span>
+              <span>Laravel Horizon &amp; Redis</span>
+              <span>Arquitectura DDD</span>
+              <span>Dwolla &amp; PayPal APIs</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills_cat_frontend">Frontend Moderno</h3>
+            <div class="chips">
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>TanStack Start &amp; Router</span>
+              <span>TanStack Query</span>
+              <span>Vue.js</span>
+              <span>Angular (5-7)</span>
+              <span>Ionic Framework</span>
+              <span>Tailwind CSS v4</span>
+              <span>Radix UI / shadcn</span>
+              <span>React Hook Form</span>
+              <span>Zod</span>
+              <span>HTML5 Semántico</span>
+              <span>CSS3 / SASS</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills_cat_databases">Bases de Datos &amp; Storage</h3>
+            <div class="chips">
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Redis (Cache &amp; Queues)</span>
+              <span>Supabase</span>
+              <span>AWS S3</span>
+              <span>Diseño y Modelado Relacional</span>
+              <span>Optimización de Queries e Índices</span>
+            </div>
+          </div>
+
+          <!-- DevOps & Tools -->
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills_cat_devops">DevOps &amp; Entorno de Trabajo</h3>
+            <div class="chips">
+              <span>Docker &amp; Docker Compose</span>
+              <span>Git &amp; GitHub</span>
+              <span>Cloudflare Workers / Pages</span>
+              <span>Linux Server</span>
+              <span>Vite</span>
+              <span>Postman / Insomnia</span>
+              <span>Datadog</span>
+              <span>Apache &amp; cPanel</span>
+              <span>Google Maps API</span>
+              <span>Metodologías Ágiles (SCRUM)</span>
+              <span>Jira &amp; Trello</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="reveal">
+          <div class="foot-brand">
+            <span class="avatar" aria-hidden="true">
+              <img src="assets/perfil.png" alt="Adrián Pérez" class="avatar-img">
+            </span>
+            <div>
+              <div class="name">Adrián José Pérez Figueredo</div>
+              <div class="role" data-i18n="about_role">Full-Stack &amp; Backend Developer</div>
+            </div>
+          </div>
+          <h2 data-i18n="foot_title">¿Listo para construir con propósito?</h2>
+          <p class="f-desc" data-i18n="foot_desc">
+            Si buscas un desarrollador que escuche las necesidades reales de tu negocio,
+            diseñe arquitecturas escalables y construya soluciones confiables, iniciemos la conversación.
+          </p>
+          <div class="foot-cta">
+            <a href="mailto:adrianperez1223@gmail.com" class="btn-white-lg" data-i18n-html="foot_btn_email">
+              <span>✉</span> Enviar email directo
+            </a>
+            <button class="btn-outline-w copy-email-btn" data-email="adrianperez1223@gmail.com" type="button"
+              data-i18n-html="foot_btn_copy">
+              <span>📋</span> Copiar correo
+            </button>
+            <a href="https://wa.me/584128913959?text=Hola%20Adri%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto"
+              target="_blank" rel="noopener noreferrer" class="btn-outline-w">
+              <span>💬</span> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="foot-nav reveal">
+          <h4 data-i18n="foot_nav_title">Navegación</h4>
+          <ul>
+            <li><a href="#inicio" data-i18n="foot_nav_home">Inicio</a></li>
+            <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+            <li><a href="#experiencia" data-i18n="nav_experience">Experiencia</a></li>
+            <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/adrian-jos%C3%A9-perez-figueredo/" target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn ↗
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/adrianjp2" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-contact">
+        <div class="contact-item" data-i18n-html="foot_location">
+          <span>📍</span> Estado Aragua, Venezuela (Disponible Remoto Mundial)
+        </div>
+        <div class="contact-item">
+          <span>✉</span> <a href="mailto:adrianperez1223@gmail.com" style="color:inherit;">adrianperez1223@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span>📱</span> +58 414-4640810
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright" data-i18n-html="foot_copyright">
+      © <span id="current-year">2026</span> Todos los derechos reservados · Diseñado e implementado con código limpio
+      por Adrián Pérez.
+    </div>
+  </footer>
+
+  <!-- MODAL DE DETALLE DE PROYECTO (HTML5 <dialog>) -->
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <div>
+        <h3 id="modal-title" data-i18n="modal_default_title">Detalle del Proyecto</h3>
+        <div id="modal-subtitle" class="modal-subtitle">Subtítulo del proyecto</div>
+      </div>
+      <button class="modal-close-btn" type="button" aria-label="Cerrar modal">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body-content">
+      <!-- Inyectado dinámicamente por JavaScript -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn-outline" type="button" data-i18n="modal_btn_close"
+        onclick="document.getElementById('project-modal').close()">Cerrar</button>
+      <a href="#" id="modal-action-btn" target="_blank" rel="noopener noreferrer" class="btn-black"
+        data-i18n="modal_btn_visit">Visitar sitio</a>
+    </div>
+  </dialog>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span class="toast-icon">🚀</span>
+    <span class="toast-msg">Notificación</span>
+  </div>
+
+</body>
+
+</html>

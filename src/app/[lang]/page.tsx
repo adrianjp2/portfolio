@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const currentLang = lang as Language;
   const t = translations[currentLang];
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adrianperez.dev';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.adrianperez.dev';
 
   return {
     title: t.meta_title,

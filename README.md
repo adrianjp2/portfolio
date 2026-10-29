@@ -97,7 +97,7 @@ Luego abre tu navegador en `http://localhost:3000`.
 En tu archivo `.env.local` (o en las variables de entorno de tu proveedor de hosting como Vercel o Cloudflare):
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://tudominio.com
+NEXT_PUBLIC_SITE_URL=https://www.adrianperez.dev
 ```
 
 Esto actualizará automáticamente los enlaces canónicos, el `sitemap.xml`, `robots.txt` y los metadatos de Open Graph con tu dominio real.

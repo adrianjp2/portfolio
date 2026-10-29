@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
   const t = translations[lang];
   const { showToast } = useToast();
   const currentYear = new Date().getFullYear();
-  const email = 'adrianperez1223@gmail.com';
+  const email = 'contact@adrianperez.dev';
 
   const handleCopyEmail = () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {

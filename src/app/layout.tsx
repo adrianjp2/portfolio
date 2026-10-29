@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://adrianperez.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.adrianperez.dev'),
   title: {
     default: 'Adrián José Pérez Figueredo | Full-Stack & Backend Developer',
     template: '%s',

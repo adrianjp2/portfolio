@@ -6,7 +6,7 @@ interface JsonLdProps {
 }
 
 export const JsonLd: React.FC<JsonLdProps> = ({ lang }) => {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adrianperez.dev';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.adrianperez.dev';
 
   const schemaData = {
     '@context': 'https://schema.org',
@@ -47,7 +47,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ lang }) => {
           image: `${siteUrl}/assets/perfil.png`,
           logo: `${siteUrl}/assets/logo-full.png`,
           url: siteUrl,
-          email: 'adrianperez1223@gmail.com',
+          email: 'contact@adrianperez.dev',
           telephone: '+584144640810',
           address: {
             '@type': 'PostalAddress',

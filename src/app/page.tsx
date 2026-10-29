@@ -8,7 +8,7 @@ import { Experience } from '@/components/Experience';
 import { Skills } from '@/components/Skills';
 import { Footer } from '@/components/Footer';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://adrianperez.dev';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.adrianperez.dev';
 const t = translations.es;
 
 export const metadata: Metadata = {

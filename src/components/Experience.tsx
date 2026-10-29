@@ -112,7 +112,7 @@ export const Experience: React.FC<ExperienceProps> = ({ lang }) => {
                   <h3 className="font-grotesk text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2 leading-snug">
                     {project.title[lang]}
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mb-4">
+                  <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mb-4 text-justify">
                     {project.cardDescription?.[lang] || project.description[lang]}
                   </p>
                   <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">
@@ -156,7 +156,7 @@ export const Experience: React.FC<ExperienceProps> = ({ lang }) => {
                       className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed flex items-start gap-2"
                     >
                       <span className="text-brand-pink flex-shrink-0 mt-0.5">•</span>
-                      <span>{point}</span>
+                      <span className="text-justify">{point}</span>
                     </li>
                   ))}
                 </ul>

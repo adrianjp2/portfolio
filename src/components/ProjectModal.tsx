@@ -85,7 +85,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             <h4 className="font-grotesk font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white mb-2">
               {lang === 'es' ? 'Sobre el Proyecto' : 'About the Project'}
             </h4>
-            <p className="font-normal text-sm sm:text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <p className="font-normal text-sm sm:text-base leading-relaxed text-neutral-600 dark:text-neutral-300 text-justify">
               {project.modalDescription?.[lang] || project.description[lang]}
             </p>
           </div>
@@ -101,7 +101,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   className="flex items-start gap-2 text-xs sm:text-sm leading-relaxed"
                 >
                   <span className="text-brand-pink flex-shrink-0 mt-0.5">•</span>
-                  <span>{point}</span>
+                  <span className="text-justify">{point}</span>
                 </li>
               ))}
             </ul>
